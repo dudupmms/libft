@@ -6,7 +6,7 @@
 /*   By: edpereir <edpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 17:03:43 by edpereir          #+#    #+#             */
-/*   Updated: 2024/09/24 17:58:46 by edpereir         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:55:20 by edpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	p = malloc(b);
 	if (p == NULL)
 	{
-		RETURN (NULL);
+		return (NULL);
 	}
 	ft_bzero(p, b);
 	return (p);

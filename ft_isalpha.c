@@ -6,13 +6,16 @@
 /*   By: edpereir <edpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 10:50:38 by edpereir          #+#    #+#             */
-/*   Updated: 2024/09/24 17:51:01 by edpereir         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:52:49 by edpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
-	if (c <= 90 && c >= 65 || c <= 122 && c >= 97)
+	if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
 		return (1);
-	return (0);
+	else
+		return (0);
 }

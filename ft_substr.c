@@ -6,7 +6,7 @@
 /*   By: edpereir <edpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 16:52:17 by edpereir          #+#    #+#             */
-/*   Updated: 2024/09/25 16:59:00 by edpereir         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:21:50 by edpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*str;
 
-	str = (char *)malloc(sizeof(*s) * (len + 1));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == 0)
 		return (NULL);
 	i = 0;

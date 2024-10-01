@@ -6,31 +6,25 @@
 /*   By: edpereir <edpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 12:10:15 by edpereir          #+#    #+#             */
-/*   Updated: 2024/09/24 18:07:25 by edpereir         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:02:38 by edpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*p1;
-	const unsigned char	*p2;
-	size_t				i;
+	char	*str1;
+	char	*str2;
+	size_t	i;
 
-	p1 = (const unsigned char *)s1;
-	p2 = (const unsigned char *)s2;
 	i = 0;
+	str1 = (char *)s1;
+	str2 = (char *)s2;
 	while (i < n)
 	{
-		if (p1[i] != p2[i])
-		{
-			if (p1[i] < p2[i])
-			{
-				return (-1);
-			}
-			return (1);
-		}
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		i++;
 	}
 	return (0);
