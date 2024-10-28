@@ -6,7 +6,7 @@
 /*   By: edpereir <edpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 12:05:07 by edpereir          #+#    #+#             */
-/*   Updated: 2024/10/01 16:35:49 by edpereir         ###   ########.fr       */
+/*   Updated: 2024/10/07 13:03:27 by edpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char uc;
+	unsigned char	uc;
 
 	uc = (unsigned char)c;
 	while (*s)

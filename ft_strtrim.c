@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edpereir <edpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 16:46:20 by edpereir          #+#    #+#             */
-/*   Updated: 2024/10/07 13:04:54 by edpereir         ###   ########.fr       */
+/*   Created: 2024/10/07 17:56:45 by edpereir          #+#    #+#             */
+/*   Updated: 2024/10/07 18:04:06 by edpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
+	char	*str;
 
+	str = 0;
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
-	j = 0;
-	if (*little == '\0' )
-	{
-		return ((char *)big);
-	}
-	while (big[i] != '\0' && i < len)
-	{
-		j = 0;
-		while (big[i + j] == little[j] && (i + j) < len && little[j] != '\0')
-		{
-			j++;
-		}
-		if (little[j] == '\0')
-		{
-			return ((char *)(big + i));
-		}
+	j = ft_strlen(s1);
+	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	}
-	return (0);
+	while (j > i && ft_strchr(set, s1[j - 1]))
+		j--;
+	str = malloc(j - i + 1);
+	if (str)
+		ft_strlcpy(str, &s1[i], j - i + 1);
+	return (str);
 }
